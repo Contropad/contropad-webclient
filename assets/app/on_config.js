@@ -16,8 +16,12 @@ function OnConfig($stateProvider, $locationProvider, $urlRouterProvider, $ionicC
           url: '/',
           templateUrl: 'dashboard/main.html',
           controller: 'MainCtrl'
+      })
+      .state('controller', {
+          url: '/controller',
+          templateUrl: 'controller/view.html',
+          controller: 'ControllerCtrl'
       });
-
 }
 
 module.exports = OnConfig;
