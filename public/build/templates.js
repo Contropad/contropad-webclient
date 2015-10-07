@@ -1,0 +1,1 @@
+angular.module("templates", []).run(["$templateCache", function($templateCache) {$templateCache.put("dashboard/main.html","<ion-view view-title=\"Punten\">\n    <ion-content>\n        <h1>Home</h1>\n    </ion-content>\n</ion-view>\n");}]);
