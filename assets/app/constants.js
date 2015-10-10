@@ -3,5 +3,5 @@
 module.exports = {
   appTitle: 'Contropad',
   apiUrl: '/api',
-  websocketUrl: 'http://localhost:1234'
+  websocketUrl: 'ws://{hostname}:8181'
 };

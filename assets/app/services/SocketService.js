@@ -10,7 +10,7 @@ function SocketService($timeout, AppSettings) {
   this.subject = new Rx.Subject();
 
   this.connect = () => {
-    this.socket = new ReconnectingWebSocket(AppSettings.websocketUrl);
+    this.socket = new ReconnectingWebSocket(AppSettings.websocketUrl.replace('{hostname}', window.location.hostname));
 
     this.socket.onmessage = (msg) => {
       this.subject.onNext(JSON.parse(msg.data));
@@ -23,7 +23,7 @@ function SocketService($timeout, AppSettings) {
       });
     };
 
-    this.socket.onopen = function(msg) {
+    this.socket.onopen = (msg) => {
       this.subject.onNext({
         action: '$changed',
         connected: true
@@ -61,6 +61,13 @@ function SocketService($timeout, AppSettings) {
       .forEach((msg) => $timeout(() => callback(msg)));
 
     scope.$on('$destroy', () => sub.dispose());
+  };
+
+  this.send = (data) => {
+    if (typeof data !== 'string') {
+      data = JSON.stringify(data);
+    }
+    this.socket.send(data);
   };
 
   this.connect();
