@@ -19,6 +19,7 @@
   ],
   "dependencies": {
     "reconnectingWebsocket": "~1.0.0",
-    "ionic": "~1.1.0"
+    "ionic": "~1.1.0",
+    "rxjs": "~4.0.1"
   }
 }
