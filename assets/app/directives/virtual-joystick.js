@@ -7,11 +7,11 @@ function VirtualJoystickDirective() {
   return {
     restrict: 'A',
     scope: true,
-    link: function(scope, attr, element) {
+    link: function(scope, element, attr) {
 
-      scope.vjoystick = new VirtualJoystick({
-          container: element[0],
-          mouseSupport: true
+      scope.vjoystick =  nipplejs.create({
+        zone: element[0],
+        color: 'blue'
       });
     }
   };

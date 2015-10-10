@@ -1,6 +1,7 @@
 'use strict';
 
 // angular modules
+require('./utils');
 require('./templates');
 require('./controllers/_index');
 require('./services/_index');
