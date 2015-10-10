@@ -11,13 +11,6 @@ function GamepadDirective(SocketService) {
     },
     link: function(scope, element, attr) {
 
-      scope.lastState = {
-        right: false,
-        up: false,
-        left: false,
-        down: false
-      };
-
       scope.onGamepadTouchStart = (ev) => {
         SocketService.send({
           type: 'button',

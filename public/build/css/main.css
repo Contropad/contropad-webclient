@@ -9,8 +9,7 @@
   width: 635px;
   height: 410px;
   background: darkgray;
-  vertical-align: middle;
-  transform: scale(0.5); }
+  vertical-align: middle; }
   .controller:before {
     content: '';
     display: block;
