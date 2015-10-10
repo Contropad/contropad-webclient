@@ -1,8 +1,8 @@
 {
-  "name": "cybermex-poker",
+  "name": "contropad-webclient",
   "version": "0.0.1",
   "author": "Roy van Kaathoven",
-  "description": "Poker Board",
+  "description": "Contropad Webclient",
   "dependencies": {
     "express": "^4.13.3",
     "grunt": "^0.4.5",
