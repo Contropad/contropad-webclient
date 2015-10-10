@@ -1,0 +1,25 @@
+{
+  "name": "contropad-node-server",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Contropad/contropad-webclient",
+  "authors": [
+    "Roy van Kaathoven <ik@royvankaathoven.nl>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reconnectingWebsocket": "~1.0.0",
+    "ionic": "~1.1.0",
+    "rxjs": "~4.0.1"
+  }
+}
